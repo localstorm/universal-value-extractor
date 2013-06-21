@@ -7,14 +7,16 @@ HOW TO USE:
 
 Say you have an XML file like this:
 
-&lt;data&gt;</br>
-    &lt;to>Some Guy&lt;/to&gt;</br>
-    &lt;subject>Some subject&lt;/subject&gt;</br>
-    &lt;body>Body text&lt;body&gt;</br>
-&lt;/data&lt;
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <to>Some Guy</to>
+    <subject>Some subject</subject>
+    <body>Body text</body>
+</data>
 
 Use this template:
 
+<?xml version="1.0" encoding="UTF-8"?>
 <template>
     <!-- Extract data from XML: -->
     <param name="subject" type="xsl">
