@@ -55,7 +55,7 @@ Use this template:
 
 Save it to a file and use this code to extract subject, body, from, to and contentType:
 
-public class Test {
+public class Test { 
 
     public static void main(String[] args) throws Exception {
         DocumentValuesExtractor dve = new TemplateDocumentValuesExtractor(new File("template.xml"));
