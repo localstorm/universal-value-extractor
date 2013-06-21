@@ -7,10 +7,10 @@ HOW TO USE:
 
 Say you have an XML file like this:
 
-&lt;data&gt;
-    &lt;to>Some Guy&lt;/to&gt;
-    &lt;subject>Some subject&lt;/subject&gt;
-    &lt;body>Body text&lt;body&gt;
+&lt;data&gt;</br>
+    &lt;to>Some Guy&lt;/to&gt;</br>
+    &lt;subject>Some subject&lt;/subject&gt;</br>
+    &lt;body>Body text&lt;body&gt;</br>
 &lt;/data&lt;
 
 Use this template:
