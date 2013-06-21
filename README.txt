@@ -49,7 +49,7 @@ Use this template:
 
     <!-- Constants: -->
     <param name="contentType" type="const">text/plain; charset=UTF-8</param>
-    <param name="from" type="const">info@market.yandex.ru</param>
+    <param name="from" type="const">info@from.from</param>
 
 </template>
 
@@ -71,3 +71,6 @@ public class Test {
         System.out.println(result);
     }
 }
+
+The OUTPUT will be:
+{to=Some Guy, body=Body text, subject=Some subject, contentType=text/plain; charset=UTF-8, from=info@from.from}
