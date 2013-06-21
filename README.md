@@ -5,9 +5,8 @@ A simple utility to extract property values from arbitrary XML using XPATH, XSL 
 
 HOW TO USE:
 
-Say you have an XML file:
+Say you have an XML file like this:
 
-<?xml version="1.0" encoding="UTF-8"?>
 <data>
     <to>Some Guy</to>
     <subject>Some subject</subject>
@@ -16,7 +15,6 @@ Say you have an XML file:
 
 Use this template:
 
-<?xml version="1.0" encoding="UTF-8"?>
 <template>
     <!-- Extract data from XML: -->
     <param name="subject" type="xsl">
