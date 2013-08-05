@@ -50,6 +50,7 @@ Use this template:
     <!-- Constants: -->
     <param name="contentType" type="const">text/plain; charset=UTF-8</param>
     <param name="from" type="const">info@from.from</param>
+    <param name="rawXml" type="raw"/>
 
 </template>
 
