@@ -6,4 +6,5 @@ package org.localstorm.extraction;
  */
 public interface SourceDocument {
     Object getDocument();
+    String toString();
 }

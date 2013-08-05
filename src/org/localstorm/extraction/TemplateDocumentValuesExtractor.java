@@ -46,11 +46,7 @@ public class TemplateDocumentValuesExtractor extends DocumentValuesExtractor {
 
                 String value = param.getTextContent();
                 String name = getStringAttr(attrs, "name");
-                String type = getStringAttr(attrs, "type");
-                if (type == null) {
-                    throw new IOException("Unable to find param attribute 'type': " + param);
-                }
-                type = type.toLowerCase();
+                String type = getStringAttr(attrs, "type").toLowerCase();
 
                 switch (type) {
                     case "xsl":
@@ -61,6 +57,9 @@ public class TemplateDocumentValuesExtractor extends DocumentValuesExtractor {
                         break;
                     case "const":
                         addExtractor(name, new ConstantValueExtractor(value));
+                        break;
+                    case "raw":
+                        addExtractor(name, new RawValueExtractor());
                         break;
                     default:
                         throw new IOException("Unsupported param type: " + type);
@@ -73,7 +72,7 @@ public class TemplateDocumentValuesExtractor extends DocumentValuesExtractor {
 
     private String getStringAttr(NamedNodeMap attrs, String name) throws IOException {
         Node n = attrs.getNamedItem(name);
-        if (n.getNodeType() != Node.ATTRIBUTE_NODE) {
+        if (n == null || n.getNodeType() != Node.ATTRIBUTE_NODE) {
             throw new IOException("Unable to read attribute [" + name + "] from " + attrs);
         }
         return n.getNodeValue();
