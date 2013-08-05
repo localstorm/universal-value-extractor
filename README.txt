@@ -74,4 +74,9 @@ public class Test {
 }
 
 The OUTPUT will be:
-{to=Some Guy, body=Body text, subject=Some subject, contentType=text/plain; charset=UTF-8, from=info@from.from}
+{to=Some Guy, body=Body text, subject=Some subject, xml=<data>
+    <to>Some Guy</to>
+    <subject>Some subject</subject>
+    <body>Body text</body>
+</data>
+, contentType=text/plain; charset=UTF-8, from=from=info@from.from}
