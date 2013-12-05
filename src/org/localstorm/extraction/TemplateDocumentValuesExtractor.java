@@ -49,6 +49,9 @@ public class TemplateDocumentValuesExtractor extends DocumentValuesExtractor {
                 String type = getStringAttr(attrs, "type").toLowerCase();
 
                 switch (type) {
+                    case "json":
+                        addExtractor(name, new JsonValueExtractor(value));
+                        break;
                     case "xsl":
                         addExtractor(name, new XslValueExtractor(value));
                         break;

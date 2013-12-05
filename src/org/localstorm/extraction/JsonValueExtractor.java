@@ -1,6 +1,7 @@
 package org.localstorm.extraction;
 
 import org.localstorm.extraction.jsonpath.JsonPath;
+import org.localstorm.extraction.jsonpath.ReadContext;
 
 import java.io.IOException;
 
@@ -26,12 +27,12 @@ public class JsonValueExtractor implements ValueExtractor {
             throw new UnsupportedDocumentType(this.getClass() + " doesn't support " + doc.getClass());
         }
 
-        String json = ((JsonSourceDocument) doc).getDocument();
+        ReadContext json = ((JsonSourceDocument) doc).getDocument();
         if (json == null) {
             return null;
         }
         try {
-            Object result = JsonPath.read(json, jsonPath);
+            Object result = json.read(jsonPath);
             return (result != null) ? result.toString() : null;
         } catch(Exception e) {
             return null;
