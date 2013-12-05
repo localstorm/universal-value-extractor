@@ -98,7 +98,11 @@ Save it to a file and use this code to extract values:
 
 public static void main(String[] args) throws Exception {
         DocumentValuesExtractor dve = new TemplateDocumentValuesExtractor(new File("templateJSON.xml"));
-        String json = "{ \"firstName\":\"John\" , \"lastName\":\"Doe\", \"objects\": [1, 2, 3]  }";
+        
+        String json = "{ \"firstName\":\"John\" , " +
+                      "\"lastName\":\"Doe\", " +
+                      "\"objects\": [1, 2, 3]  }";
+                      
         Map<String, String> result = dve.extract(new JsonSourceDocument(json));
         System.out.println("Result: "+result);
 }
